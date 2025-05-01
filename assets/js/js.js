@@ -1,3 +1,4 @@
+/*
 const tabs = document.querySelectorAll('.tab');
 const indicator = document.getElementById('indicator');
 const slideText = document.getElementById('slide-text');
@@ -5,7 +6,7 @@ const contents = [
   `<div class='carousel-title'>O que é a LIA?</div>O vídeo da sua sinalização é capturado e visualizado por algoritmos que tentam imitar a visão humana. Depois, todas as informações são tratadas para a etapa de compreensão.`,
   `<div class='carousel-title'>Slide 2</div>Conteúdo do segundo slide.`,
   `<div class='carousel-title'>Slide 3</div>Conteúdo do terceiro slide.`
-];
+]; */
 
 function mudarSlide(index) {
   tabs.forEach((tab, i) => {

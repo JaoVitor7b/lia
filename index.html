@@ -10,44 +10,82 @@
 </head>
 
 <body>
-<header class="bg-light py-4 shadow-sm">
-  <div class="container d-flex align-items-center justify-content-between flex-wrap gap-3">
-    
-    <!-- Logo -->
-    <img src="assets/img/logo-positive.png" alt="Logo LIA" class="img-fluid" style="max-width: 150px; height: auto;">
-
-    <!-- Navbar -->
-    <nav class="header-content">
-      <ul class="nav flex-wrap justify-content-center">
-        <li class="nav-item"><a class="nav-link text-primary fw-semibold" href="#sobre">Sobre</a></li>
-        <li class="nav-item"><a class="nav-link text-primary fw-semibold" href="#publico">Público Alvo</a></li>
-        <li class="nav-item"><a class="nav-link text-primary fw-semibold" href="#funcionalidades">Funcionalidades</a></li>
-        <li class="nav-item"><a class="nav-link text-primary fw-semibold" href="#equipe">Equipe</a></li>
-      </ul>
-    </nav>
-
-    <!-- Carrossel logo -->
-    <div class="carousellogo">
-      <img src="assets/img/mockup-03.png" class="active">
-      <img src="assets/img/mockup-02.png">
-      <img src="assets/img/mockup-01.png">
-    </div>
-  </div>
-
-  <script>
-    const images = document.querySelectorAll('.carousellogo img');
-    let current = 0;
-
-    setInterval(() => {
-      images[current].classList.remove('active');
-      current = (current + 1) % images.length;
-      images[current].classList.add('active');
-    }, 4000);
-  </script>
-</header>
+  <header class="bg-light py-4 shadow-sm">
+    <div class="container">
+      
+      <!-- Navbar -->
+      <nav class="d-flex justify-content-center mb-4">
+        <ul class="nav flex-wrap gap-3">
+          <li class="nav-item"><a class="nav-link text-primary fw-semibold" href="#sobre">QUEM SOMOS</a></li>
+          <li class="nav-item"><a class="nav-link text-primary fw-semibold" href="#publico">O QUE FAZEMOS</a></li>
+          <li class="nav-item"><a class="nav-link text-primary fw-semibold" href="#funcionalidades">SOLUÇÕES</a></li>
+          <li class="nav-item"><a class="nav-link text-primary fw-semibold" href="#projeto">ÚLTIMO PROJETO</a></li>
+          <li class="nav-item"><a class="nav-link text-primary fw-semibold" href="#equipe">EQUIPE</a></li>
+        </ul>
+      </nav>
   
+      <!-- Conteúdo principal -->
+      <div class="d-flex align-items-center justify-content-between flex-wrap gap-5 px-3">
+        
+        <!-- Logo e descrição -->
+        <div class="text-start">
+          <img src="assets/img/logo-positive.png" alt="Logo LIA" class="img-fluid mb-3" style="max-width: 180px;">
+          <p class="text-muted">A excelência no desenvolvimento<br>de software.</p>
+        </div>
+  
+        <!-- Carrossel de dispositivos -->
+        <div class="carousellogo">
+          <img src="assets/img/mockup-03.png" class="active">
+          <img src="assets/img/mockup-02.png">
+          <img src="assets/img/mockup-01.png">
+        </div>
+  
+      </div>
+    </div>
+  
+    <!-- Script do carrossel -->
+    <script>
+      const images = document.querySelectorAll('.carousellogo img');
+      let current = 0;
+  
+      setInterval(() => {
+        images[current].classList.remove('active');
+        current = (current + 1) % images.length;
+        images[current].classList.add('active');
+      }, 4000);
+    </script>
+  </header>
+  
+  <section class="info-section py-5 text-center">
+    <div class="container">
+  
+      <!-- QUEM SOMOS -->
+      <h2 class="section-title">QUEM SOMOS?</h2>
+      <h3 class="section-subtitle text-warning">UMA VISÃO SOBRE O MERCADO DE SOFTWARE</h3>
+      <p class="section-text">
+        Seu negócio não precisa se aventurar em tendências passageiras ou promessas milagrosas.<br>
+        Procuram-se solucionadores de problemas que possam compreender e executar aquilo que o cliente deseja, de forma eficiente e segura.<br>
+        É assim que a Byteforge desenvolve o seu software:<br>
+        <strong>A chama da criatividade</strong> e uma <strong>sólida base técnica</strong> forjam a excelência.
+      </p>
+  
+      <a href="#contato" class="btn btn-warning text-white fw-semibold px-4 py-2 my-3">VAMOS CONVERSAR</a>
+  
+      <!-- O QUE FAZEMOS -->
+      <h2 class="section-title mt-5">O QUE FAZEMOS?</h2>
+      <h3 class="section-subtitle text-warning">PRODUTOS DE SOFTWARE COM EXCELÊNCIA</h3>
+      <p class="section-text">
+        Nossos sistemas atendem grandes empresas, novos empreendimentos e comunidades inteiras nos ramos de administração, venda, comunicação, educação e muitos outros.<br>
+        Utilizamos tanto <strong>tecnologias bem fundamentadas</strong> como <strong>disruptivas</strong> para proporcionar resultados inovadores ao seu negócio, com os menores riscos possíveis.<br>
+        Desenvolver sistemas de informação não é uma tarefa simples – é uma <strong>atividade essencial</strong> dentro de um mundo interconectado e de altas velocidades.
+      </p>
+  
+      <p class="fw-semibold mt-3">Conheça nossas soluções abaixo:</p>
+      
+    </div>
+  </section>
 
-  <section id="sobre">
+  <!-- <section id="sobre">
     <h2>Sobre o LIA</h2>
     <p style="font-size: 13px; color: #888; margin-bottom: 30px;">Proin bibendum ex a nulla volutpat, id maximus nisi blandit.</p>
     <div class="sobre-container">
@@ -68,89 +106,65 @@
       </div>
       <div class="img-placeholder"></div>
     </div>
-  </section>
+  </section> ---->
    
   
-  <section  id="publico" class="py-5 publico-alvo-section position-relative bg-white">
+  <section class="carousel-section py-5 text-center text-white">
     <div class="container">
-      <!-- Título -->
-      <div class="text-center mb-4">
-        <h2 class="text-primary fw-semibold">Público Alvo</h2>
-        <p class="text-muted small">Proin bibendum ex a nulla volutpat, id maximus nisi blandit.</p>
-      </div>
   
-      <div class="row align-items-center">
-        <!-- Coluna Esquerda -->
-        <div class="col-lg-6 position-relative d-flex justify-content-center">
-          <!-- Fundo azul claro centralizado -->
-          <div class="fundo-azul position-absolute"></div>
+      <div id="solutionCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+        <div class="carousel-inner">
   
-          <div class="d-flex flex-column gap-4 z-1">
-            <!-- Card 1 -->
-            <div class="card shadow rounded-4 p-3" style="width: 270px;">
-              <div class="d-flex align-items-start gap-3">
-                <div class="bg-secondary-subtle rounded" style="width: 30px; height: 30px;"></div>
-                <div>
-                  <strong>Loren ipsum</strong>
-                  <p class="small mb-0">pulvinar in massa et, sodales.</p>
-                </div>
-              </div>
-            </div>
-  
-            <!-- Card Central Maior -->
-            <div class="card shadow-lg rounded-4 p-4 align-self-center" style="width: 300px;">
-              <div class="d-flex align-items-start gap-3">
-                <div class="text-secondary fs-4">★</div>
-                <div>
-                  <strong>Loren ipsum</strong>
-                  <p class="small mb-1">Cras rhoncus, arcu sit amet lacinia scelerisque</p>
-                </div>
-              </div>
-              <div class="mt-3">
-                <!-- SVG Gráfico Similar -->
-                <svg width="100" height="80" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M10 70 C30 30, 60 50, 90 10" stroke="#1e73ff" stroke-width="2" fill="none" />
-                  <line x1="10" y1="70" x2="90" y2="70" stroke="#1e73ff" stroke-width="2" marker-end="url(#arrow)" />
-                  <line x1="10" y1="70" x2="10" y2="10" stroke="#1e73ff" stroke-width="2" marker-end="url(#arrow)" />
-                  <defs>
-                    <marker id="arrow" markerWidth="10" markerHeight="10" refX="0" refY="3" orient="auto" markerUnits="strokeWidth">
-                      <path d="M0,0 L0,6 L9,3 z" fill="#1e73ff" />
-                    </marker>
-                  </defs>
-                </svg>
-              </div>
-            </div>
-  
-            <!-- Card 3 -->
-            <div class="card shadow rounded-4 p-3" style="width: 270px;">
-              <div class="d-flex align-items-start gap-3">
-                <div class="bg-secondary-subtle rounded-circle" style="width: 30px; height: 30px;"></div>
-                <div>
-                  <strong>Loren ipsum</strong>
-                  <p class="small mb-0">pulvinar in massa et, sodales.</p>
-                </div>
+          <!-- Slide 1 -->
+          <div class="carousel-item active">
+            <div class="d-flex justify-content-center">
+              <div class="card solution-card-rect">
+                <img src="assets/img/project-01.png" class="card-img solution-img-rect" alt="Ícone 1">
               </div>
             </div>
           </div>
+  
+          <!-- Slide 2 -->
+          <div class="carousel-item">
+            <div class="d-flex justify-content-center">
+              <div class="card solution-card-rect">
+                <img src="assets/img/project-02.png" class="card-img solution-img-rect" alt="Ícone 2">
+              </div>
+            </div>
+          </div>
+  
+          <!-- Slide 3 -->
+          <div class="carousel-item">
+            <div class="d-flex justify-content-center">
+              <div class="card solution-card-rect">
+                <img src="assets/img/project-03.png" class="card-img solution-img-rect" alt="Ícone 3">
+              </div>
+            </div>
+          </div>
+  
+          <!-- Adicione mais slides conforme necessário -->
+  
         </div>
   
-        <!-- Coluna Direita -->
-        <div class="col-lg-6 mt-4 mt-lg-0">
-          <h4 class="text-primary fw-semibold">In hac habitasse platea dictumst.</h4>
-          <p class="text-dark small text-justify">
-            Maecenas condimentum enim ut pulvinar ultricies. Suspendisse quis velit non erat malesuada consectetur.
-          </p>
-          <p class="text-dark small text-justify">
-            Mauris cursus sodales congue. Sed at tellus et arcu convallis rhoncus sed quis elit. Suspendisse gravida rhoncus eleifend.
-          </p>
-          <p class="text-dark small text-justify">
-            Mauris posuere sodales leo eu scelerisque.
-          </p>
-        </div>
+        <!-- Controles -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#solutionCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#solutionCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
       </div>
+  
+      <p class="carousel-description mt-4">
+        Tradutor de LIBRAS em legenda e áudio para ambientes de videochamada por visão computacional
+      </p>
+      <a href="#projeto" class="btn btn-light fw-semibold px-4 py-2">SAIBA MAIS</a>
+  
     </div>
   </section>
-
+  
+  
+<!--
   <section  id="funcionalidades">
     <h2 class="mb-5" id="funcionalidades" >Como funciona</h2>
     <div class="funciona-container">
@@ -158,28 +172,28 @@
       <div class="funciona-step">Passo 2<br>Descrição</div>
       <div class="funciona-step">Passo 3<br>Descrição</div>
     </div>
-  </section>
+  </section> -->
 
   <section id="equipe" class="container text-center py-5">
-    <h2 class="text-primary mb-5">Nossa equipe</h2>
+    <h2 class="text-primary mb-2">NOSSA EQUIPE</h2>
+    <h4 class="text-warning mb-5">AS PESSOAS POR TRÁS DA MARCA</h4>
     <div class="row">
       <div class="col-md-6">
         <div class="equipe-grid">
-          <div class="equipe-membro azul-escuro" onclick="mostrarFoto('assets/img/arthur.jpeg')">ARTHUR PARRA</div>
+          <div class="equipe-membro laranja" onclick="mostrarFoto('assets/img/arthur.jpeg')">ARTHUR PARRA</div>
           <div class="equipe-membro azul-claro" onclick="mostrarFoto('assets/img/guilherme.jpg')">GUILHERME SHIMADA</div>
-          <div class="equipe-membro azul-claro" onclick="mostrarFoto('assets/img/gustavo.jpg')">GUSTAVO KLETELIN GER</div>
+          <div class="equipe-membro azul-escuro" onclick="mostrarFoto('assets/img/gustavo.jpg')">GUSTAVO KLETELIN GER</div>
           <div class="equipe-membro azul-intermediario" onclick="mostrarFoto('assets/img/joao.jpg')">JOÃO VITOR</div>
           <div class="equipe-membro azul-escuro" onclick="mostrarFoto('assets/img/matheus.jpg')">MATHEUS BERTOLDO</div>
-          <div class="equipe-membro bg-transparent"></div>
         </div>
       </div>
       <div class="col-md-6 d-flex flex-column align-items-center justify-content-center">
         <div class="foto-container mb-3">
-          <img id="foto-membro" src="assets/img/arthur.jpeg" alt="Foto do membro">
+          <img id="foto-membro" src="assets/img/arthur.jpeg" alt="Foto do membro" class="img-fluid rounded" style="width: 100px;">
         </div>
-        <div style="max-width: 300px; text-align: center; font-size: 14px;">
-          <strong id="nome-membro" class="text-primary">Arthur Parra</strong>
-          <p id="descricao-membro">Descrição de Arthur Parra.</p>
+        <div style="max-width: 300px; text-align: center;">
+          <strong id="nome-membro" class="text-warning">Arthur Parra</strong>
+          <p style="font-size: 14px;">Analista de dados</p>
         </div>
       </div>
     </div>
