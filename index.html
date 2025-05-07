@@ -89,28 +89,7 @@
     </div>
   </section>
 
-  <!-- <section id="sobre">
-    <h2>Sobre o LIA</h2>
-    <p style="font-size: 13px; color: #888; margin-bottom: 30px;">Proin bibendum ex a nulla volutpat, id maximus nisi blandit.</p>
-    <div class="sobre-container">
-      <div class="carousel">
-        <div class="carousel-tabs">
-          <div class="tab active" onclick="mudarSlide(0)">Slide 1</div>
-          <div class="tab" onclick="mudarSlide(1)">Slide 2</div>
-          <div class="tab" onclick="mudarSlide(2)">Slide 3</div>
-        </div>
-        <div class="tab-indicator" id="indicator"></div>
-        <div class="carousel-content">
-          <div class="carousel-text" id="slide-text">
-            <div class="carousel-title">Lorem ipsum dolor</div>
-            Nam tincidunt nibh erat, a dictum arcu lobortis non.<br>
-            Phasellus dignissim risus sit amet ante rutrum, nec imperdiet leo dignissim.
-          </div>
-        </div>
-      </div>
-      <div class="img-placeholder"></div>
-    </div>
-  </section> ---->
+
 
   <section class="carousel-section py-5 text-center text-white">
     <div class="container">
@@ -144,11 +123,8 @@
               </div>
             </div>
           </div>
-
           <!-- Adicione mais slides conforme necessário -->
-
         </div>
-
         <!-- Controles -->
         <button class="carousel-control-prev" type="button" data-bs-target="#solutionCarousel" data-bs-slide="prev">
           <span class="carousel-control-prev-icon"></span>
@@ -165,6 +141,80 @@
 
     </div>
   </section>
+
+  <section class="projeto-lia text-center py-5">
+    <div class="container">
+      <img src="assets/img/logo-lia.png" alt="LIA Project Logo" class="mb-5" style="max-width: 150px;">
+      <p class="descricao">
+        O Projeto LIA busca transformar a experiência de comunicação das pessoas com deficiência auditiva, usando a LIBRAS – Linguagem de Sinais Brasileira.<br><br>
+        Surdos e mudos não podem ser excluídos das conversas. A Internet tem ajudado muito nesse sentido, mas ainda dificulta o acesso e a troca de informações para esse grupo social.
+      </p>
+      <p class="destaque mt-4">
+        <strong>
+          Uma plataforma para videochamadas em LIBRAS <br>
+          vai te entregar o poder de fala, mesmo com quem <br>
+          não fala do mesmo jeito que você.
+        </strong>
+      </p>
+    </div>
+  </section>
+
+
+  <section class="oque-e text-center py-5">
+    <h2 class="titulo mb-4">O que é?</h2>
+  
+    <div class="card-carousel">
+      <div class="tabs">
+        <button class="tab active" onclick="trocarAba(0)">
+          <span class="bolinha"></span>
+          <span>Problema</span>
+        </button>
+        <button class="tab" onclick="trocarAba(1)">
+          <span class="bolinha"></span>
+          <span>Metodologia</span>
+        </button>
+        <button class="tab" onclick="trocarAba(2)">
+          <span class="bolinha"></span>
+          <span>Solução</span>
+        </button>
+      </div>
+  
+      <div class="conteudo-carousel">
+        <div class="slide active">
+          <div class="texto">
+            <h5><strong>A deficiência auditiva</strong></h5>
+            <p>
+              Segundo a Pesquisa Nacional de Saúde em 2019, o Brasil tinha 17,3 milhões de pessoas com algum tipo de deficiência auditiva.<br><br>
+              Essas pessoas enfrentam problemas diários de exclusão e dificuldade para comunicação social.<br><br>
+              Quando a deficiência é de grau severo e a pessoa não conhece a LIBRAS, o problema se torna ainda mais crítico.
+            </p>
+          </div>
+          <img src="assets/img/photo-06.png" alt="Pessoa com deficiência auditiva">
+        </div>
+  
+        <div class="slide">
+          <div class="texto">
+            <h5><strong>Metodologia aplicada</strong></h5>
+            <p>
+              Utilizamos redes neurais e visão computacional para identificar os sinais de LIBRAS com precisão, a partir de vídeos e imagens capturadas por câmera.
+            </p>
+          </div>
+          <img src="assets/img/photo-05.png" alt="Metodologia">
+        </div>
+  
+        <div class="slide">
+          <div class="texto">
+            <h5><strong>Solução proposta</strong></h5>
+            <p>
+              O LIA interpreta sinais de LIBRAS e os transforma em texto ou áudio, promovendo inclusão e facilitando a comunicação entre surdos e ouvintes.
+            </p>
+          </div>
+          <img src="assets/img/photo-04.png" alt="Solução">
+        </div>
+      </div>
+    </div>
+  </section> 
+
 
   <section class="como-funciona text-center py-5 position-relative">
     <h2 class="text-primary mb-2">Como funciona</h2>
@@ -232,62 +282,7 @@
         </div>
       </div>
     </div>
-  </section>
-
-  <section class="oque-e text-center py-5">
-    <h2 class="titulo mb-4">O que é?</h2>
-  
-    <div class="card-carousel">
-      <div class="tabs">
-        <button class="tab active" onclick="trocarAba(0)">
-          <span class="bolinha"></span>
-          <span>Problema</span>
-        </button>
-        <button class="tab" onclick="trocarAba(1)">
-          <span class="bolinha"></span>
-          <span>Metodologia</span>
-        </button>
-        <button class="tab" onclick="trocarAba(2)">
-          <span class="bolinha"></span>
-          <span>Solução</span>
-        </button>
-      </div>
-  
-      <div class="conteudo-carousel">
-        <div class="slide active">
-          <div class="texto">
-            <h5><strong>A deficiência auditiva</strong></h5>
-            <p>
-              Segundo a Pesquisa Nacional de Saúde em 2019, o Brasil tinha 17,3 milhões de pessoas com algum tipo de deficiência auditiva.<br><br>
-              Essas pessoas enfrentam problemas diários de exclusão e dificuldade para comunicação social.<br><br>
-              Quando a deficiência é de grau severo e a pessoa não conhece a LIBRAS, o problema se torna ainda mais crítico.
-            </p>
-          </div>
-          <img src="assets/img/photo-06.png" alt="Pessoa com deficiência auditiva">
-        </div>
-  
-        <div class="slide">
-          <div class="texto">
-            <h5><strong>Metodologia aplicada</strong></h5>
-            <p>
-              Utilizamos redes neurais e visão computacional para identificar os sinais de LIBRAS com precisão, a partir de vídeos e imagens capturadas por câmera.
-            </p>
-          </div>
-          <img src="assets/img/photo-05.png" alt="Metodologia">
-        </div>
-  
-        <div class="slide">
-          <div class="texto">
-            <h5><strong>Solução proposta</strong></h5>
-            <p>
-              O LIA interpreta sinais de LIBRAS e os transforma em texto ou áudio, promovendo inclusão e facilitando a comunicação entre surdos e ouvintes.
-            </p>
-          </div>
-          <img src="assets/img/photo-04.png" alt="Solução">
-        </div>
-      </div>
-    </div>
-  </section>  
+  </section> 
   
   <!--
   <section  id="funcionalidades">
