@@ -12,11 +12,11 @@
 </head>
 
 <body>
-  <header class="header-byteforge">
+  <header id="header-byteforge">
     <div class="container">
 
       <!-- Navbar -->
-      <nav class="navbar-byteforge">
+      <nav id="navbar-byteforge">
         <p><a href="#sobre">Quem somos</a></p>
         <p><a href="#publico">O que fazemos</a></p>
         <p><a href="#funcionalidades">Soluções</a></p>
@@ -34,7 +34,7 @@
         </div>
 
         <!-- Carrossel de dispositivos -->
-        <div class="carousellogo">
+        <div id="carousellogo">
           <img src="assets/img/mockup-03.png" class="active">
           <img src="assets/img/mockup-02.png">
           <img src="assets/img/mockup-01.png">
@@ -45,7 +45,7 @@
 
     <!-- Script do carrossel -->
     <script>
-      const images = document.querySelectorAll('.carousellogo img');
+      const images = document.querySelectorAll('#carousellogo img');
       let current = 0;
 
       setInterval(() => {
@@ -56,8 +56,8 @@
     </script>
   </header>
 
-  <section class="info-section py-5 text-center">
-    <div class="container">
+  <section id="info-section">
+    <div id="container">
 
       <!-- QUEM SOMOS -->
       <h2 class="section-title">QUEM SOMOS?</h2>
@@ -301,19 +301,19 @@
     <div class="row flex-wrap align-items-center justify-content-center">
       <div class="col-lg-6 col-md-12 mb-4">
         <div class="equipe-grid">
-          <div class="equipe-membro laranja" onclick="mostrarFoto('assets/img/arthur.jpg')">ARTHUR PARRA</div>
+          <div class="equipe-membro laranja" onclick="mostrarFoto('assets/img/arthur.jpeg')">ARTHUR PARRA</div>
           <div class="equipe-membro azul-claro" onclick="mostrarFoto('assets/img/guilherme.jpg')">GUILHERME SHIMADA
           </div>
           <div class="equipe-membro azul-escuro" onclick="mostrarFoto('assets/img/gustavo.jpg')">GUSTAVO KLETELIN GER
           </div>
-          <div class="equipe-membro azul-intermediario" onclick="mostrarFoto('assets/img/joao.jpg')">JOÃO VITOR</div>
+          <div class="equipe-membro azul-intermediario" onclick="mostrarFoto('assets/img/joao.jpeg')">JOÃO VITOR</div>
           <div class="equipe-membro azul-escuro" onclick="mostrarFoto('assets/img/matheus.jpg')">MATHEUS BERTOLDO</div>
         </div>
       </div>
 
       <div class="col-lg-6 col-md-12 d-flex flex-column align-items-center justify-content-center">
         <div class="foto-container mb-3">
-          <img id="foto-membro" src="assets/img/arthur.jpg" alt="Foto do membro" class="rounded"
+          <img id="foto-membro" src="assets/img/arthur.jpeg" alt="Foto do membro" class="rounded"
             style="width: 200px; height: 200px; object-fit: cover;">
         </div>
         <div style="max-width: 300px; text-align: center;">

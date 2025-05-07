@@ -1,4 +1,8 @@
 /* Base */
+* {
+  box-sizing: border-box;
+}
+
 body {
   width: 100%;
   overflow-x: hidden;
@@ -6,7 +10,13 @@ body {
   color: #000;
 }
 
-.navbar-byteforge {
+#header-byteforge {
+  background-color: #dadcf3;
+  padding: 40px 20px;
+  border-bottom-left-radius: 60px;
+}
+
+#navbar-byteforge {
   display: flex;
   justify-content: center;
   gap: 30px;
@@ -15,20 +25,14 @@ body {
   font-size: 14px;
 }
 
-.header-byteforge {
-  background-color: #dadcf3;
-  padding: 40px 20px;
-  border-bottom-left-radius: 60px;
-}
-
-.navbar-byteforge a {
+#navbar-byteforge a {
   text-decoration: none;
   color: #1a237e;
   font-weight: 600;
   transition: color 0.3s ease;
 }
 
-.carousellogo {
+#carousellogo {
   width: 400px;
   height: 400px;
   position: relative;
@@ -36,7 +40,7 @@ body {
   flex-shrink: 0;
 }
 
-.carousellogo img {
+#carousellogo img {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -45,92 +49,27 @@ body {
   transition: opacity 1s ease-in-out;
 }
 
-.carousellogo img.active {
+#carousellogo img.active {
   opacity: 1;
   z-index: 1;
 }
 
 /* Responsividade extra para telas muito pequenas */
 @media (max-width: 576px) {
-  .carousellogo {
+  #carousellogo {
     display: none;
   }
 }
 
-/* Para garantir que tudo fique à esquerda até mesmo em telas pequenas */
+/* Ajustes para telas pequenas */
 @media (max-width: 768px) {
-  .logoforge {
+  #logoforge {
     width: 180px;
     margin-bottom: 10px;
   }
 
-  .header-content p {
+  #header-content p {
     font-size: 18px;
-  }
-}
-
-.celular {
-  width: 500px;
-  height: auto;
-  max-width: 100%;
-  z-index: 1;
-  display: flex;
-  justify-content: flex-end;
-  pointer-events: none;
-}
-
-/* Para garantir que tudo fique à esquerda até mesmo em telas pequenas */
-@media (max-width: 768px) {
-  .celular {
-    width: 180px;
-    margin-bottom: 10px;
-  }
-
-  .header-content p {
-    font-size: 18px;
-  }
-}
-
-section.lia-project {
-  max-width: 600px;
-  margin: 60px auto;
-  text-align: center;
-  padding: 0 20px;
-  color: #1c1c1c;
-}
-
-.lia-project img {
-  width: 150px;
-  margin-bottom: 25px;
-}
-
-.lia-project p {
-  font-size: 14px;
-  line-height: 1.6;
-  margin: 10px 0;
-  color: #333;
-}
-
-.lia-project .highlight {
-  font-weight: bold;
-  font-size: 15px;
-  color: #000;
-  margin-top: 30px;
-  line-height: 1.6;
-}
-
-@media (max-width: 600px) {
-  .lia-project {
-    margin: 40px 10px;
-  }
-
-  .lia-project img {
-    width: 110px;
-  }
-
-  .lia-project p,
-  .lia-project .highlight {
-    font-size: 14px;
   }
 }
 
@@ -157,7 +96,7 @@ section {
 .section-subtitle {
   font-size: 1.1rem;
   font-weight: bold;
-  color: #f7941d; /* laranja vibrante */
+  color: #f7941d;
   text-transform: uppercase;
   margin-bottom: 1.5rem;
 }
@@ -180,8 +119,7 @@ section {
   background-color: #e57a00;
 }
 
-
-/* carousel projetos*/
+/* carousel projetos */
 .carousel-section {
   background-color: #1f2858;
 }
@@ -215,47 +153,6 @@ section {
 .carousel-control-next-icon {
   background-color: #fff;
   border-radius: 50%;
-}
-
-.sobre-container,
-.publico-container,
-.funciona-container,
-.equipe-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-
-/* .carousel {
-  background: #eaf4ff;
-  border-radius: 20px;
-  padding: 30px;
-  max-width: 720px;
-  width: 100%;
-  text-align: left;
-} */
-
-.tab {
-  flex: 1;
-  text-align: center;
-  padding: 10px;
-  cursor: pointer;
-  color: #777;
-}
-
-.tab.active {
-  color: #3b5bce;
-  font-weight: bold;
-}
-
-.tab-indicator {
-  height: 3px;
-  background: #3b5bce;
-  border-radius: 2px;
-  width: 33.3%;
-  transition: transform 0.3s ease;
 }
 
 .carousel-content {
@@ -339,52 +236,33 @@ section {
   .equipe-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-}
 
+  .foto-container {
+    width: 140px;
+    height: 140px;
+  }
+}
 
 /* Responsivo */
 @media (max-width: 1200px) {
-  .logoforge { top: 140px; right: 150px; width: 160px; height: 160px; }
+  .logoforge {
+    top: 140px;
+    right: 150px;
+    width: 160px;
+    height: 160px;
+  }
 }
 
 @media (max-width: 992px) {
-  .logoforge { top: 120px; right: 100px; width: 130px; height: 130px; }
+  .logoforge {
+    top: 120px;
+    right: 100px;
+    width: 130px;
+    height: 130px;
+  }
 }
 
 @media (max-width: 768px) {
-  header {
-    padding: 30px 20px 100px;
-    border-bottom-left-radius: 30px;
-  }
-
-  nav {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-    font-size: 13px;
-  }
-
-  .header-content h1 { font-size: 42px; }
-  .header-content p { font-size: 18px; }
-  .header-content-sub {
-    font-size: 14px;
-    max-width: 100%;
-  }
-
-  .carousel-tabs {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .tab-indicator { display: none; }
-
-  .funciona-step {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-
-  .funciona-step::after { display: none; }
-
   .logoforge {
     position: static;
     display: block;
@@ -393,39 +271,18 @@ section {
     height: 100px;
   }
 
-  .fundo-azul {
-    width: 160px;
-    height: 240px;
-    background-color: #e4f1ff;
-    border-radius: 12px;
-    top: 50%;
-    left: 40%;
-    transform: translate(-50%, -50%);
-    z-index: 0;
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
   }
 
-  .text-justify { text-align: justify; }
-
-  .card-uniform {
-    width: 270px;
-    min-height: 220px;
-  }
-
-  .equipe-grid {
-    grid-template-columns: 2fr;
-  }
-
-  .equipe-membro {
-    height: 80px;
-    font-size: 14px;
-  }
-
-  .foto-container {
-    width: 140px;
-    height: 140px;
+  .linha-tracejada,
+  .ponto {
+    display: none;
   }
 }
 
+/* Footer */
 footer {
   background-color: #252e5b;
   color: #ffffff;
@@ -487,6 +344,7 @@ footer {
   }
 }
 
+/* Cards interativos */
 .cards-container {
   display: flex;
   justify-content: center;
@@ -537,19 +395,7 @@ footer {
   transform: rotateY(180deg);
 }
 
-/* Responsivo */
-@media (max-width: 768px) {
-  .cards-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .linha-tracejada,
-  .ponto {
-    display: none;
-  }
-}
-
+/* O que é */
 .oque-e {
   background-color: #fff;
 }
@@ -561,6 +407,7 @@ footer {
   color: #3b5bdb;
 }
 
+/* Carrossel */
 .card-carousel {
   background-color: #e4f0fa;
   border-radius: 18px;
@@ -664,7 +511,7 @@ footer {
 
 @font-face {
   font-family: 'Fredoka';
-  src: url('../fonts/Fredoka/Fredoka-VariableFont_wdth\,wght.ttf') format('woff2');
+  src: url('../fonts/Fredoka/Fredoka-VariableFont_wdth_wght.ttf') format('woff2');
   font-weight: normal;
   font-style: normal;
 }

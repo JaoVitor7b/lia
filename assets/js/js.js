@@ -10,19 +10,19 @@ const contents = [
 
 function mostrarFoto(nomeArquivo) {
   const nomes = {
-    'assets/img/arthur.jpg': 'Arthur Parra',
+    'assets/img/arthur.jpeg': 'Arthur Parra',
     'assets/img/guilherme.jpg': 'Guilherme Shimada',
     'assets/img/gustavo.jpg': 'Gustavo Kletelin Ger',
-    'assets/img/joao.jpg': 'João Vitor',
+    'assets/img/joao.jpeg': 'João Vitor',
     'assets/img/matheus.jpg': 'Matheus Bertoldo',
   };
 
   const descricoes = {
-    'assets/img/arthur.jpg': 'Analista de dados',
-    'assets/img/guilherme.jpg': 'Desenvolvedor Front-end',
-    'assets/img/gustavo.jpg': 'Engenheiro de Machine Learning',
-    'assets/img/joao.jpg': 'Designer de Interface',
-    'assets/img/matheus.jpg': 'Engenheiro de Software',
+    'assets/img/arthur.jpeg': 'Analista de Dados e Arquiteto de Nuvem',
+    'assets/img/guilherme.jpg': 'Engenheiro de IA e Engenheiro de Software',
+    'assets/img/gustavo.jpg': 'Analista de Rede e Segurança',
+    'assets/img/joao.jpeg': 'Desenvolvedor Fullstatck Web',
+    'assets/img/matheus.jpg': 'Desenvolvedor Fullstatck Mobile, Engenheiro de Software e Designer',
   };
 
   document.getElementById('foto-membro').src = nomeArquivo;
