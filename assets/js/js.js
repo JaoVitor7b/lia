@@ -1,12 +1,30 @@
+const images = document.querySelectorAll('#carousellogo img');
+let current = 0;
+
 /*
-const tabs = document.querySelectorAll('.tab');
-const indicator = document.getElementById('indicator');
-const slideText = document.getElementById('slide-text');
-const contents = [
-  `<div class='carousel-title'>O que é a LIA?</div>O vídeo da sua sinalização é capturado e visualizado por algoritmos que tentam imitar a visão humana. Depois, todas as informações são tratadas para a etapa de compreensão.`,
-  `<div class='carousel-title'>Slide 2</div>Conteúdo do segundo slide.`,
-  `<div class='carousel-title'>Slide 3</div>Conteúdo do terceiro slide.`
-]; */
+setInterval(() => {
+  images[current].classList.remove('active');
+  current = (current + 1) % images.length;
+  images[current].classList.add('active');
+}, 4000);
+*/
+
+setInterval(()=>{
+  moveCarousel(1);
+}, 5000)
+
+const track = document.getElementById("carousel-track");
+let index = 0;
+
+function moveCarousel(direction) {
+  const slides = document.querySelectorAll(".carousel-slide");
+  index += direction;
+
+  if (index < 0) index = slides.length - 1;
+  if (index >= slides.length) index = 0;
+
+  track.style.transform = `translateX(-${index * 100}%)`;
+}
 
 function mostrarFoto(nomeArquivo) {
   const nomes = {
@@ -21,24 +39,38 @@ function mostrarFoto(nomeArquivo) {
     'assets/img/arthur.jpeg': 'Analista de Dados e Arquiteto de Nuvem',
     'assets/img/guilherme.jpg': 'Engenheiro de IA e Engenheiro de Software',
     'assets/img/gustavo.jpg': 'Analista de Rede e Segurança',
-    'assets/img/joao.jpeg': 'Desenvolvedor Fullstatck Web',
-    'assets/img/matheus.jpg': 'Desenvolvedor Fullstatck Mobile, Engenheiro de Software e Designer',
+    'assets/img/joao.jpeg': 'Desenvolvedor Fullstack Web',
+    'assets/img/matheus.jpg': 'Desenvolvedor Fullstack Mobile, Engenheiro de Software e Designer',
   };
 
-  document.getElementById('foto-membro').src = nomeArquivo;
-  document.getElementById('nome-membro').innerText = nomes[nomeArquivo] || 'Nome não encontrado';
-  document.getElementById('descricao-membro').innerText = descricoes[nomeArquivo] || 'Descrição não encontrada';
+  const nome = nomes[nomeArquivo] || 'Nome não encontrado';
+  const descricao = descricoes[nomeArquivo] || 'Descrição não disponível';
+
+  const nomeEl = document.getElementById('nome-membro');
+  const descricaoEl = document.getElementById('descricao-membro');
+  const fotoEl = document.getElementById('foto-membro');
+
+  // Transição suave
+  fotoEl.style.opacity = 0;
+
+  setTimeout(() => {
+    nomeEl.textContent = nome;
+    descricaoEl.textContent = descricao;
+    fotoEl.src = nomeArquivo;
+    fotoEl.style.opacity = 1;
+  }, 200);
 }
 
-function trocarAba(index) {
-  const slides = document.querySelectorAll('.slide');
-  const tabs = document.querySelectorAll('.tab');
 
-  slides.forEach((slide, i) => {
-    slide.classList.toggle('active', i === index);
-  });
+  function trocarAba(index) {
+    const tabs = document.querySelectorAll('.tab');
+    const slides = document.querySelectorAll('.slide');
 
-  tabs.forEach((tab, i) => {
-    tab.classList.toggle('active', i === index);
-  });
-}
+    tabs.forEach(tab => tab.classList.remove('active'));
+    slides.forEach(slide => {
+      slide.classList.remove('active');
+    });
+
+    tabs[index].classList.add('active');
+    slides[index].classList.add('active');
+  }
