@@ -4,21 +4,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Leitor automático de libras - LIA</title>
+  <title>ByteForge - Nossa Página</title>
   <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="icon" type="image/png" href="assets/img/logo.png">
+  <link rel="icon" type="image/png" href="assets/img/logo-negative.pngs">
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 
+
 <body>
-  <header id="header-byteforge">
+
+
+  <!-- Navbar ByteForge -->
+  <header id="header-byteforge" class="byte-forge">
     <div class="container">
 
-      <!-- Navbar -->
       <nav id="navbar-byteforge">
         <p><a href="#sobre">Quem somos</a></p>
-        <p><a href="#publico">O que fazemos</a></p>
+        <p><a href="#sobre">O que fazemos</a></p>
         <p><a href="#funcionalidades">Soluções</a></p>
         <p><a href="#projeto">Último Projeto</a></p>
         <p><a href="#equipe">Equipe</a></p>
@@ -42,27 +45,15 @@
 
       </div>
     </div>
-
-    <!-- Script do carrossel -->
-    <script>
-      const images = document.querySelectorAll('#carousellogo img');
-      let current = 0;
-
-      setInterval(() => {
-        images[current].classList.remove('active');
-        current = (current + 1) % images.length;
-        images[current].classList.add('active');
-      }, 4000);
-    </script>
   </header>
 
-  <section id="info-section">
-    <div id="container">
 
-      <!-- QUEM SOMOS -->
-      <h2 class="section-title">QUEM SOMOS?</h2>
-      <h3 class="section-subtitle text-warning">UMA VISÃO SOBRE O MERCADO DE SOFTWARE</h3>
-      <p class="section-text">
+  <!-- QUEM SOMOS -->
+  <section id="sobre" class="byte-forge">
+    <div id="container">
+      <h2 id="section-title">QUEM SOMOS?</h2>
+      <h3 id="section-subtitle">UMA VISÃO SOBRE O MERCADO DE SOFTWARE</h3>
+      <p id="section-text">
         Seu negócio não precisa se aventurar em tendências passageiras ou promessas milagrosas.<br>
         Procuram-se solucionadores de problemas que possam compreender e executar aquilo que o cliente deseja, de forma
         eficiente e segura.<br>
@@ -70,12 +61,12 @@
         <strong>A chama da criatividade</strong> e uma <strong>sólida base técnica</strong> forjam a excelência.
       </p>
 
-      <a href="#contato" class="btn btn-warning text-white fw-semibold px-4 py-2 my-3">VAMOS CONVERSAR</a>
+      <a id="button" href="#contato" class="btn btn-warning text-white fw-semibold px-4 py-4 my-10">VAMOS CONVERSAR</a>
 
-      <!-- O QUE FAZEMOS -->
-      <h2 class="section-title mt-5">O QUE FAZEMOS?</h2>
-      <h3 class="section-subtitle text-warning">PRODUTOS DE SOFTWARE COM EXCELÊNCIA</h3>
-      <p class="section-text">
+      <!-- O QUE FAZEMOS -->                
+      <h2 id="section-title">O QUE FAZEMOS?</h2>
+      <h3 id="section-subtitle">PRODUTOS DE SOFTWARE COM EXCELÊNCIA</h3>
+      <p id="section-text">
         Nossos sistemas atendem grandes empresas, novos empreendimentos e comunidades inteiras nos ramos de
         administração, venda, comunicação, educação e muitos outros.<br>
         Utilizamos tanto <strong>tecnologias bem fundamentadas</strong> como <strong>disruptivas</strong> para
@@ -84,70 +75,82 @@
         de um mundo interconectado e de altas velocidades.
       </p>
 
-      <p class="fw-semibold mt-3">Conheça nossas soluções abaixo:</p>
+      <p id="section-text" class="fw-semibold mt-3">Conheça nossas soluções abaixo:</p>
 
     </div>
   </section>
 
 
+  <!-- Projetos -->
+  <div id="carousel-container" class="byte-forge">
+    <div id="carousel-wrapper">
+      <div id="carousel-track">
 
-  <section class="carousel-section py-5 text-center text-white">
-    <div class="container">
-
-      <div id="solutionCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
-        <div class="carousel-inner">
-
-          <!-- Slide 1 -->
-          <div class="carousel-item active">
-            <div class="d-flex justify-content-center">
-              <div class="card solution-card-rect">
-                <img src="assets/img/project-01.png" class="card-img solution-img-rect" alt="Ícone 1">
-              </div>
-            </div>
+        <!-- Slide 1 -->
+        <div class="carousel-slide">
+          <div id="cards-row">
+            <div class="carousel-card"><img src="assets/img/project-01.png" alt="FORMAR"></div>
           </div>
-
-          <!-- Slide 2 -->
-          <div class="carousel-item">
-            <div class="d-flex justify-content-center">
-              <div class="card solution-card-rect">
-                <img src="assets/img/project-02.png" class="card-img solution-img-rect" alt="Ícone 2">
-              </div>
-            </div>
+          <div id="carousel-description">
+            O mapa brasileiro do ensino superior. Ache a faculdade perfeita para você.
           </div>
-
-          <!-- Slide 3 -->
-          <div class="carousel-item">
-            <div class="d-flex justify-content-center">
-              <div class="card solution-card-rect">
-                <img src="assets/img/project-03.png" class="card-img solution-img-rect" alt="Ícone 3">
-              </div>
-            </div>
-          </div>
-          <!-- Adicione mais slides conforme necessário -->
+          <button id="carousel-button">SAIBA MAIS</button>
         </div>
-        <!-- Controles -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#solutionCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#solutionCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon"></span>
-        </button>
+
+        <!-- Slide 2 -->
+        <div class="carousel-slide">
+          <div id="cards-row">
+            <div class="carousel-card"><img src="assets/img/project-02.png" alt="HEAT NAVIGATION"></div>
+          </div>
+          <div id="carousel-description">
+            Mapeamento de ilhas de calor em tempo real.
+          </div>
+          <button id="carousel-button">SAIBA MAIS</button>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-slide">
+          <div id="cards-row">
+            <div class="carousel-card"><img src="assets/img/project-04.png" alt="PET FINDER"></div>
+          </div>
+          <div id="carousel-description">
+            Comunidade para animais de estimação perdidos com reconhecimento inteligente.
+          </div>
+          <button id="carousel-button">SAIBA MAIS</button>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="carousel-slide">
+          <div id="cards-row">
+            <div class="carousel-card"><img src="assets/img/project-03.png" alt="OPEN MIND"></div>
+          </div>
+          <div id="carousel-description">
+            Pré-diagnóstico do Transtorno de Déficit de Atenção. Rápido, intuitivo e fundamentado.
+          </div>
+          <button id="carousel-button">SAIBA MAIS</button>
+        </div>
+
       </div>
 
-      <p class="carousel-description mt-4">
-        Tradutor de LIBRAS em legenda e áudio para ambientes de videochamada por visão computacional
-      </p>
-      <a href="#projeto" class="btn btn-light fw-semibold px-4 py-2">SAIBA MAIS</a>
+      <!-- Controles --> 
+      <!-- <div id="carousel-controls">
+        <div id="carousel-left-click" onclick="moveCarousel(-1)"></div>
+        <div id="carousel-right-click" onclick="moveCarousel(1)"></div>
+      </div> -->
 
     </div>
-  </section>
+  </div>
 
-  <section class="projeto-lia text-center py-5">
+
+  <!-- Lia -->
+  <section id="projeto" class="projeto-lia py-5 lia-font">
     <div class="container">
-      <img src="assets/img/logo-lia.png" alt="LIA Project Logo" class="mb-5" style="max-width: 150px;">
+      <img src="assets/img/logo-lia.png" alt="LIA Project Logo" id="logo-lia">
       <p class="descricao">
-        O Projeto LIA busca transformar a experiência de comunicação das pessoas com deficiência auditiva, usando a LIBRAS – Linguagem de Sinais Brasileira.<br><br>
-        Surdos e mudos não podem ser excluídos das conversas. A Internet tem ajudado muito nesse sentido, mas ainda dificulta o acesso e a troca de informações para esse grupo social.
+        O Projeto LIA busca transformar a experiência de comunicação das pessoas com deficiência auditiva, usando a
+        LIBRAS – Linguagem de Sinais Brasileira.<br><br>
+        Surdos e mudos não podem ser excluídos das conversas. A Internet tem ajudado muito nesse sentido, mas ainda
+        dificulta o acesso e a troca de informações para esse grupo social.
       </p>
       <p class="destaque mt-4">
         <strong>
@@ -160,73 +163,100 @@
   </section>
 
 
-  <section class="oque-e text-center py-5">
+  <!-- O que é? -->
+  <section class="oque-e py-5 lia-font">
     <h2 class="titulo mb-4">O que é?</h2>
-  
+
     <div class="card-carousel">
       <div class="tabs">
         <button class="tab active" onclick="trocarAba(0)">
-          <span class="bolinha"></span>
+          <span class="bolinha"><span class="bolinha-preenchida"></span></span>
           <span>Problema</span>
         </button>
         <button class="tab" onclick="trocarAba(1)">
-          <span class="bolinha"></span>
+          <span class="bolinha"><span class="bolinha-preenchida"></span></span>
           <span>Metodologia</span>
         </button>
         <button class="tab" onclick="trocarAba(2)">
-          <span class="bolinha"></span>
+          <span class="bolinha"><span class="bolinha-preenchida"></span></span>
           <span>Solução</span>
         </button>
       </div>
-  
+
       <div class="conteudo-carousel">
         <div class="slide active">
           <div class="texto">
             <h5><strong>A deficiência auditiva</strong></h5>
             <p>
-              Segundo a Pesquisa Nacional de Saúde em 2019, o Brasil tinha 17,3 milhões de pessoas com algum tipo de deficiência auditiva.<br><br>
+              Segundo a Pesquisa Nacional de Saúde em 2019, o Brasil tinha 17,3 milhões de pessoas com algum tipo de
+              deficiência auditiva.<br><br>
               Essas pessoas enfrentam problemas diários de exclusão e dificuldade para comunicação social.<br><br>
               Quando a deficiência é de grau severo e a pessoa não conhece a LIBRAS, o problema se torna mais crítico.
             </p>
           </div>
-          <img src="assets/img/photo-06.png" alt="Pessoa com deficiência auditiva">
+          <img src="assets/img/photo-04.jpg" alt="Pessoa com deficiência auditiva">
         </div>
-  
+
         <div class="slide">
           <div class="texto">
             <h5><strong>Metodologia aplicada</strong></h5>
             <p>
-              Utilizamos redes neurais e visão computacional para identificar os sinais de LIBRAS com precisão, a partir de vídeos e imagens capturadas por câmera.
+              Utilizamos redes neurais e visão computacional para identificar os sinais de LIBRAS com precisão, a partir
+              de vídeos e imagens capturadas por câmera.
             </p>
           </div>
           <img src="assets/img/photo-05.png" alt="Metodologia">
         </div>
-  
+
         <div class="slide">
           <div class="texto">
             <h5><strong>Solução proposta</strong></h5>
             <p>
-              O LIA interpreta sinais de LIBRAS e os transforma em texto ou áudio, promovendo inclusão e facilitando a comunicação entre surdos e ouvintes.
+              Desenvolvemos o LIA, um leitor automático de LIBRAS, que traduz sinais em tempo real para texto ou fala,
+              facilitando a comunicação entre surdos e ouvintes.
             </p>
           </div>
-          <img src="assets/img/photo-04.png" alt="Solução">
+          <img src="assets/img/photo-06.png" alt="Solução">
         </div>
       </div>
     </div>
-  </section> 
+  </section>
 
+  <!-- Publico Alvo -->
+  <section id="publico-alvo" class="py-5 lia-font">
+    <div class="container">
+      <h2 id="titulo-publico" class="text-center mb-5">Público Alvo</h2>
 
-  <section class="como-funciona text-center py-5 position-relative">
+      <div class="row align-items-center justify-content-center">
+        <!-- Coluna de Imagens -->
+        <div id="coluna-imagens" >
+          <div class="left-column">
+            <img  src="assets/img/photo-01.png" alt="Imagem 1" class="img-publico">
+          <img  src="assets/img/photo-02.jpg" alt="Imagem 2" class="img-publico">
+          </div>
+          <div class="right-column">
+            <img  src="assets/img/photo-04.jpg" alt="Imagem 3" class="img-publico imagem-central">
+
+          </div>
+        </div>
+
+        <!-- Texto -->
+        <div id="coluna-texto" class="col-lg-6 col-md-12">
+          <h4 id="subtitulo-publico" class="fw-bold text-primary">Além da surdez</h4>
+          <p id="descricao-publico">
+            A plataforma LIA é voltada para comunicação entre falantes do português brasileiro e falantes de LIBRAS,
+            sejam eles deficientes auditivos, professores, alunos, atendentes ou qualquer outra pessoa.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Como funciona -->
+  <section class="como-funciona text-center py-5 position-relative lia-font">
     <h2 class="text-primary mb-2">Como funciona</h2>
     <p class="mb-5">A base do projeto é o treinamento de redes neurais para reconhecimento de sinais da LIBRAS através
       de técnicas de visão computacional.</p>
-
-    <div class="linha-tracejada">
-      <span class="ponto" style="left: 8%;"></span>
-      <span class="ponto" style="left: 32%;"></span>
-      <span class="ponto" style="left: 56%;"></span>
-      <span class="ponto" style="left: 80%;"></span>
-    </div>
 
     <div class="cards-container">
       <div class="card-flip" onclick="this.classList.toggle('active')">
@@ -282,23 +312,14 @@
         </div>
       </div>
     </div>
-  </section> 
-  
-  <!--
-  <section  id="funcionalidades">
-    <h2 class="mb-5" id="funcionalidades" >Como funciona</h2>
-    <div class="funciona-container">
-      <div class="funciona-step">Passo 1<br>Descrição</div>
-      <div class="funciona-step">Passo 2<br>Descrição</div>
-      <div class="funciona-step">Passo 3<br>Descrição</div>
-    </div>
-  </section> -->
+  </section>
 
-  <section id="equipe" class="container text-center py-5">
-    <h2 class="text-primary mb-2">NOSSA EQUIPE</h2>
-    <h4 class="text-warning mb-5">AS PESSOAS POR TRÁS DA MARCA</h4>
 
-    <div class="row flex-wrap align-items-center justify-content-center">
+  <section id="equipe" class="container text-center py-5 byte-forge">
+    <h2 id="section-title">NOSSA EQUIPE</h2>
+    <h2 id="section-subtitle">AS PESSOAS POR TRÁS DA MARCA</h2>
+
+    <div class="row justify-content-center">
       <div class="col-lg-6 col-md-12 mb-4">
         <div class="equipe-grid">
           <div class="equipe-membro laranja" onclick="mostrarFoto('assets/img/arthur.jpeg')">ARTHUR PARRA</div>
@@ -314,18 +335,18 @@
       <div class="col-lg-6 col-md-12 d-flex flex-column align-items-center justify-content-center">
         <div class="foto-container mb-3">
           <img id="foto-membro" src="assets/img/arthur.jpeg" alt="Foto do membro" class="rounded"
-            style="width: 200px; height: 200px; object-fit: cover;">
+            style="width: 200px; height: 200px; object-fit: cover; transition: opacity 0.3s ease;">
         </div>
         <div style="max-width: 300px; text-align: center;">
           <strong id="nome-membro" class="text-warning">Arthur Parra</strong>
-          <p id="descricao-membro" style="font-size: 14px;">Analista de dados</p>
+          <p id="descricao-membro" style="font-size: 14px;">Analista de Dados e Arquiteto de Nuvem</p>
         </div>
       </div>
     </div>
   </section>
 
   <footer>
-    <div class="footer-container">
+    <div class="footer-container byte-forge">
       <div class="footer-column">
         <h3>Contate-nos</h3>
         <p>Telefone: (99) 99 9999-9999</p>
